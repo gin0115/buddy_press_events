@@ -48,7 +48,7 @@ jobs:
         run: composer validate
 
       - name: Install dependencies
-        run: composer clearcache && rm -rf composer.lock && composer install --prefer-dist --no-suggest
+        run: composer clearcache && rm -rf composer.lock && composer install --prefer-dist --no-suggest && composer build-dev
 
       - name: Run Tests
         env:
