@@ -6,6 +6,7 @@ coverage-report
 composer.lock
 .phpunit.result.cache
 stock-management.code-workspace
+build/*
 
 # Logs
 logs
