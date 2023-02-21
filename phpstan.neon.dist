@@ -12,6 +12,7 @@ parameters:
       - build/php/vendor
     ignoreErrors:
         - '#Function get_option invoked with 2 parameters, 0 required#'
+            reportUnmatched: false
     bootstrapFiles:
         - vendor/php-stubs/wordpress-stubs/wordpress-stubs.php
         - vendor/php-stubs/woocommerce-stubs/woocommerce-stubs.php
