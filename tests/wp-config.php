@@ -38,7 +38,7 @@ define( 'WP_DEBUG', true );
 // DO NOT use a production database or one that is shared with something else.
 // If being ran by github CLI use these DB values.
 if ( getenv( 'environment_github' ) ) {
-	define( 'DB_NAME', 'bp_events' );
+	define( 'DB_NAME', '' );
 	define( 'DB_USER', 'root' );
 	define( 'DB_PASSWORD', 'crab' );
 	define( 'DB_HOST', '0.0.0.0' );

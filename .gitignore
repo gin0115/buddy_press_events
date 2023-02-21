@@ -8,6 +8,7 @@ composer.lock
 stock-management.code-workspace
 build/*
 tests/.env
+clover.xml
 
 # Logs
 logs

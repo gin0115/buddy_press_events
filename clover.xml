@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1677023488">
-  <project timestamp="1677023488">
+<coverage generated="1677023621">
+  <project timestamp="1677023621">
     <package name="Gin0115\BuddyPress_Events\I18n">
       <file name="/shared/httpd/pinkcrab/htdocs/wp-content/plugins/buddy_press_events/src/I18n/Translations.php">
         <class name="Gin0115\BuddyPress_Events\I18n\Translations" namespace="Gin0115\BuddyPress_Events\I18n">
