@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1677023488">
+  <project timestamp="1677023488">
+    <package name="Gin0115\BuddyPress_Events\I18n">
+      <file name="/shared/httpd/pinkcrab/htdocs/wp-content/plugins/buddy_press_events/src/I18n/Translations.php">
+        <class name="Gin0115\BuddyPress_Events\I18n\Translations" namespace="Gin0115\BuddyPress_Events\I18n">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="16" ncloc="11" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+    </package>
+    <metrics files="1" loc="16" ncloc="11" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+  </project>
+</coverage>
