@@ -12,6 +12,8 @@ parameters:
       - build/php/vendor
     ignoreErrors:
         - '#Function get_option invoked with 2 parameters, 0 required#'
+        - '#Function add_action invoked with 2 parameters, 0 required#'
+        - '#Constant BP_VERSION not found#'
     reportUnmatchedIgnoredErrors: false
     bootstrapFiles:
         - vendor/php-stubs/wordpress-stubs/wordpress-stubs.php

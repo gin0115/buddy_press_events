@@ -30,6 +30,7 @@ class Test_Basic_Setup extends \WP_UnitTestCase {
 
 	/** @testdox Composer libs should be prefixed to avoid conflicts */
 	public function test_composer_libs_are_prefixed() {
+	
 		$this->assertStringStartsWith(
 			'Gin0115_BPE_1\\',
 			( new ReflectionClass( 'Gin0115_BPE_1\\Pixie\\Connection' ) )->getNamespaceName()

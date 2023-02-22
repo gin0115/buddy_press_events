@@ -11,6 +11,23 @@ declare(strict_types=1);
 
 namespace Gin0115\BuddyPress_Events\I18n;
 
-class Translations {
+final class Translations {
 
+	/**
+	 * Gets an instance of class.
+	 *
+	 * @return Translations
+	 */
+	public static function get_instance(): Translations {
+		return new self();
+	}
+
+	/**
+	 * Returns the translations for Plugin Events
+	 *
+	 * @return Plugin_Events
+	 */
+	public static function plugin_events(): Plugin_Events {
+		return new Plugin_Events();
+	}
 }

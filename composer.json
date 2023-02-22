@@ -45,7 +45,7 @@
         "php": ">=7.4.0",
         "pinkcrab/perique-framework-core": "^1",
         "pinkcrab/registerables": "*",
-        "pinkcrab/perique-plugin-lifecycle": "^0.2",
+        "pinkcrab/perique-plugin-lifecycle": "^0.2.0",
         "pinkcrab/ajax": "^1",
         "pinkcrab/wp-psr16-cache": "^2",
         "pinkcrab/bladeone-provider": "^1",
