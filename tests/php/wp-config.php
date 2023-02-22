@@ -1,7 +1,7 @@
 <?php
 
 /* Path to the WordPress codebase you'd like to test. Add a forward slash in the end. */
-define( 'ABSPATH', dirname( dirname( __FILE__ ) ) . '/wordpress/' );
+define( 'ABSPATH', dirname( dirname( __FILE__, 2 ) ) . '/wordpress/' );
 
 /*
  * Path to the theme to test with.
@@ -38,7 +38,7 @@ define( 'WP_DEBUG', true );
 // DO NOT use a production database or one that is shared with something else.
 // If being ran by github CLI use these DB values.
 if ( getenv( 'environment_github' ) ) {
-	define( 'DB_NAME', '' );
+	define( 'DB_NAME', 'bp_events' );
 	define( 'DB_USER', 'root' );
 	define( 'DB_PASSWORD', 'crab' );
 	define( 'DB_HOST', '0.0.0.0' );

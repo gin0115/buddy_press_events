@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <phpunit
-    bootstrap="tests/bootstrap.php"
+    bootstrap="tests/php/bootstrap.php"
     backupGlobals="false"
     colors="true"
     convertErrorsToExceptions="true"
@@ -21,7 +21,7 @@
     </filter>
 
     <php>
-        <env name="WP_PHPUNIT__TESTS_CONFIG" value="tests/wp-config.php" />
+        <env name="WP_PHPUNIT__TESTS_CONFIG" value="tests/php/wp-config.php" />
     </php>
 
     <logging>

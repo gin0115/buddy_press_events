@@ -18,12 +18,12 @@ class Test_Basic_Setup extends \WP_UnitTestCase {
 	/** @testdox WP PHPUnit should be included with all expected constants defined. */
 	public function test_wp_phpunit_is_loaded_via_composer() {
 		$this->assertStringStartsWith(
-			dirname( __DIR__ ) . '/vendor/',
+			dirname( __DIR__, 2 ) . '/vendor/',
 			getenv( 'WP_PHPUNIT__DIR' )
 		);
 
 		$this->assertStringStartsWith(
-			dirname( __DIR__ ) . '/vendor/',
+			dirname( __DIR__, 2 ) . '/vendor/',
 			( new ReflectionClass( 'WP_UnitTestCase' ) )->getFileName()
 		);
 	}

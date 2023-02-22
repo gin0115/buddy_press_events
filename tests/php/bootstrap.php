@@ -5,10 +5,10 @@
  */
 
 // Composer autoloader must be loaded before WP_PHPUNIT__DIR will be available
-require_once dirname( __DIR__ ) . '/build/php/vendor/autoload.php';
+require_once dirname( __DIR__, 2 ) . '/build/php/vendor/autoload.php';
 
 // Include help files.
-foreach ( glob( dirname( __DIR__ ) . '/tests/Helper/*.php' ) as $file ) {
+foreach ( glob( dirname( __DIR__, 1 ) . '/tests/Helper/*.php' ) as $file ) {
 	require_once $file;
 }
 
