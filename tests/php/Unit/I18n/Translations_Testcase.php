@@ -32,27 +32,21 @@ abstract class Translations_Testcase extends \WP_UnitTestCase {
 	}
 
 	/**
-	 * Setup the test case.
-	 *
-	 * Adds a filters.
+	 * Adds a filters to ensure all translations are passed through WP functions.
 	 *
 	 * @return void
 	 */
-	public function setUp(): void {
-		parent::setUp();
+	public function add_filter_for_value(): void {
 		add_filter( 'gettext_with_context', array( $this, 'filter_gettext' ), 20, 4 );
 		add_filter( 'gettext', array( $this, 'filter_gettext' ), 20, 3 );
 	}
 
 	/**
-	 * Teardown the test case.
-	 *
-	 * Removes the filters.
+	 * Removes the filters to ensure all translations are passed through WP functions.
 	 *
 	 * @return void
 	 */
-	public function tearDown(): void {
-		parent::tearDown();
+	public function remove_filter_for_value(): void {
 		remove_filter( 'gettext_with_context', array( $this, 'filter_gettext' ), 20 );
 		remove_filter( 'gettext', array( $this, 'filter_gettext' ), 20 );
 	}
@@ -63,6 +57,8 @@ abstract class Translations_Testcase extends \WP_UnitTestCase {
 	 * @return void
 	 */
 	public function test_all_methods_return_string(): void {
+		$this->add_filter_for_value();
+
 		$classname = $this->get_namespace();
 		$instance  = new $classname();
 
@@ -106,5 +102,7 @@ abstract class Translations_Testcase extends \WP_UnitTestCase {
 				$this->assertEquals( 'MODIFIED FOR TEST', $instance->{$method->name}( ...$args ) );
 			}
 		}
+
+		$this->remove_filter_for_value();
 	}
 }
