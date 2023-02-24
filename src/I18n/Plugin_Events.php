@@ -55,6 +55,6 @@ class Plugin_Events {
 	public function bp_version_below_minimum( string $min_version ): string {
 		// Translators: %1$s is the minimum bp version required, %2$s is the users current bp version.
 		$template = _x( 'BuddyPress Events requires BuddyPress version %1$s or above. You are running version %2$s.', 'Error message if users bp version is below the minimum required.', 'gin0115_bp_events' );
-		return sprintf( $template, $min_version, function_exists( 'bp_get_version' ) ? bp_get_version() : '11.1.0' );
+		return sprintf( $template, $min_version, function_exists( 'bp_get_version' ) ? bp_get_version() : '##ERROR## - BP NOT LOADED' );
 	}
 }
