@@ -27,7 +27,7 @@ final class Translations {
 	 *
 	 * @return Plugin_Events
 	 */
-	public static function plugin_events(): Plugin_Events {
+	public function plugin_events(): Plugin_Events {
 		return new Plugin_Events();
 	}
 }

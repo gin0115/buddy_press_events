@@ -18,7 +18,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Gin0115\\BuddyPress_Events\\": "../tests"
+            "Gin0115\\BuddyPress_Events\\Tests\\": "../tests/php"
         }
     },
     "require-dev": {
@@ -61,6 +61,8 @@
     },
     "scripts": {
         "test": "./vendor/bin/phpunit --coverage-clover clover.xml --testdox --colors=always",
+        "test:unit": "./vendor/bin/phpunit --group unit --coverage-clover clover.xml --testdox --colors=always",
+        "test:app": "./vendor/bin/phpunit --group application --coverage-clover clover.xml --testdox --colors=always",
         "coverage": "./vendor/bin/phpunit --coverage-html coverage-report --testdox --colors=always",
         "analyse": "./vendor/bin/phpstan analyse src -l8",
         "sniff": "./vendor/bin/phpcs src/ -v",

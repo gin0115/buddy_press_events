@@ -31,6 +31,13 @@ tests_add_filter(
 	'muplugins_loaded',
 	function() {
 
+		// Add a mock for bp_get_version() if not defined.
+		if ( ! function_exists( 'bp_get_version' ) ) {
+			function bp_get_version() {
+				return '11.1.0';
+			}
+		}
+
 	}
 );
 
