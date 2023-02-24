@@ -1,4 +1,5 @@
-
+[![codecov](https://codecov.io/gh/gin0115/buddy_press_events/branch/main/graph/badge.svg?token=EGMRU1ANFJ)](https://codecov.io/gh/gin0115/buddy_press_events)
+[![GitHub_CI](https://github.com/gin0115/buddy_press_events/actions/workflows/php.yaml/badge.svg)](https://github.com/gin0115/buddy_press_events/actions/workflows/php.yaml)
 
 ## Setting up the Dev Evnironment
 

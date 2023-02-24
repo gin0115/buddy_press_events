@@ -18,7 +18,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Gin0115\\BuddyPress_Events\\": "../tests"
+            "Gin0115\\BuddyPress_Events\\Tests\\": "../tests/php"
         }
     },
     "require-dev": {
@@ -33,19 +33,21 @@
         "yoast/phpunit-polyfills": "^0.2.0 || ^1.0.0",
         "symfony/var-dumper": "*",
         "gin0115/wpunit-helpers": "*",
-        "jetbrains/phpstorm-stubs": "dev-master",
         "humbug/php-scoper": "*",
         "bamarni/composer-bin-plugin": "^1.4",
         "php-stubs/woocommerce-stubs": "^6.7",
         "kimhf/advanced-custom-fields-pro-stubs": "^5.9",
         "pxlrbt/php-scoper-prefix-remover": "*",
+        "gin0115/buddypress-stubs": "11.*",
+        "php-stubs/acf-pro-stubs": "^6.0",
         "vlucas/phpdotenv": "^5.4"
+
     },
     "require": {
         "php": ">=7.4.0",
         "pinkcrab/perique-framework-core": "^1",
         "pinkcrab/registerables": "*",
-        "pinkcrab/perique-plugin-lifecycle": "^0.2",
+        "pinkcrab/perique-plugin-lifecycle": "^0.2.0",
         "pinkcrab/ajax": "^1",
         "pinkcrab/wp-psr16-cache": "^2",
         "pinkcrab/bladeone-provider": "^1",
@@ -59,6 +61,8 @@
     },
     "scripts": {
         "test": "./vendor/bin/phpunit --coverage-clover clover.xml --testdox --colors=always",
+        "test:unit": "./vendor/bin/phpunit --group unit --coverage-clover clover.xml --testdox --colors=always",
+        "test:app": "./vendor/bin/phpunit --group application --coverage-clover clover.xml --testdox --colors=always",
         "coverage": "./vendor/bin/phpunit --coverage-html coverage-report --testdox --colors=always",
         "analyse": "./vendor/bin/phpstan analyse src -l8",
         "sniff": "./vendor/bin/phpcs src/ -v",

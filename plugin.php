@@ -12,11 +12,15 @@
  * License URI:     http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:     pc_stock_man
  */
+
 use Gin0115_BPE_1\PinkCrab\Ajax\Ajax_Bootstrap;
+use Gin0115\BuddyPress_Events\I18n\Translations;
 use Gin0115_BPE_1\PinkCrab\BladeOne\BladeOne_Bootstrap;
 use Gin0115_BPE_1\PinkCrab\Perique\Application\App_Factory;
+use Gin0115_BPE_1\PinkCrab\Plugin_Lifecycle\Plugin_State_Controller;
 use Gin0115_BPE_1\PinkCrab\Ajax\Registration_Middleware\Ajax_Middleware;
 use Gin0115_BPE_1\PinkCrab\Route\Registration_Middleware\Route_Middleware;
+use Gin0115\BuddyPress_Events\Events\Plugin_Events\Plugin_Dependency_Checks;
 use Gin0115_BPE_1\PinkCrab\Perique_Admin_Menu\Registration_Middleware\Page_Middleware;
 use Gin0115_BPE_1\PinkCrab\Registerables\Registration_Middleware\Registerable_Middleware;
 
@@ -35,5 +39,8 @@ $app = ( new App_Factory( __DIR__ ) )->with_wp_dice( true )
 	->construct_registration_middleware( Page_Middleware::class )
 	->construct_registration_middleware( Ajax_Middleware::class )
 	->construct_registration_middleware( Route_Middleware::class )
-	->construct_registration_middleware( Registerable_Middleware::class )
-	->boot();
+	->construct_registration_middleware( Registerable_Middleware::class );
+
+// Check that all dependencies are met and then boot app.
+$dependency_checks = new Plugin_Dependency_Checks( $app, Translations::get_instance() );
+add_action( 'plugins_loaded', $dependency_checks, 0 );

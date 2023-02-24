@@ -54,6 +54,7 @@ if ( getenv( 'environment_github' ) ) {
 	define( 'DB_COLLATE', '' );
 }
 
+
 /**#@+
  * Authentication Unique Keys and Salts.
  *

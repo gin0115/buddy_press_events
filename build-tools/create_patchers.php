@@ -27,6 +27,11 @@ $builder->set_stubs(
 			'stubsPath'   => array( $vendor_dir . '/php-stubs/acf-pro-stubs/acf-pro-stubs.php' ),
 			'destination' => __DIR__ . '/patchers/acf_patcher.do',
 		),
+		array(
+			'package'     => 'gin0115/buddypress-stubs',
+			'stubsPath'   => array( $vendor_dir . '/gin0115/buddypress-stubs/buddypress-stubs.php' ),
+			'destination' => __DIR__ . '/patchers/buddypress_patcher.do',
+		),
 	)
 );
 $builder->execute();
